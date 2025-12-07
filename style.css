@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes load-gradient-move {
+    0% {
+        background-position: 200%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+#load-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    background: linear-gradient(90deg, #fff 0%, #F2F2F4 90%, #fff 100%);
+    background-size: 200% 100%;
+    background-position: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Tangerine', cursive;
+    font-size: 9vmin;
+    transition: opacity 1s ease-in-out, visibility 1s;
+    animation: load-gradient-move 2s ease-in-out infinite;
+}
+
+#load-overlay.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#load-overlay div {
+    width: 22vmin;
+}
+
+@keyframes open-left-window {
+    from {
+        transform: translateX(0);
+        background-position: 99.5% 50%, 99.5% 50%, 100% 50%;
+    }
+    to {
+        transform: translateX(-50vw);
+        background-position: 99.5% 50%, 99.5% 50%, calc(100% + 50vw) 50%;
+    }
+}
+
+@keyframes open-right-window {
+    from {
+        transform: translateX(0);
+        background-position: 0.5% 50%, 0.5% 50%, 0% 50%;
+    }
+    to {
+        transform: translateX(+50vw);
+        background-position: 0.5% 50%, 0.5% 50%, calc(0% - 50vw) 50%;
+    }
+}
+
+#start-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#start-overlay .open-button {
+    position: absolute;
+    height: 20vmin;
+    width: 20vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    color: #222;
+    font-size: 9vmin;
+    font-family: 'Tangerine', cursive;
+    outline: none;
+    background: radial-gradient(#e2e2e2, #8d8d8d);
+    z-index: 1;
+}
+
+#start-overlay.open .open-button {
+    display: none;
+}
+
+#start-overlay .windows {
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+#start-overlay .window {
+    height: 100%;
+    width: 50%;
+    background-repeat: no-repeat;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: visibility 2s;
+}
+
+#start-overlay.open {
+    visibility: hidden;
+}
+
+#start-overlay .left {
+    background: url(./img/tree_left_screen.jpg), url(./img/tree_left_multiply.jpg), url(./img/bg_left_blur.jpg);
+    background-position: 99.5% 50%, 99.5% 50%, 100% 50%;
+    background-size: cover;
+    background-blend-mode: screen, multiply, normal;
+}
+
+#start-overlay.open .left {
+    animation-name: open-left-window;
+}
+
+#start-overlay .right {
+    background: url(./img/tree_right_screen.jpg), url(./img/tree_right_multiply.jpg), url(./img/bg_right_blur.jpg);
+    background-position: 0.5% 50%, 0.5% 50%, 0% 50%;
+    background-size: cover;
+    background-blend-mode: screen, multiply, normal;
+}
+
+#start-overlay.open .right {
+    animation-name: open-right-window;
+}
+
+#main {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#main .section-selector {
+    background: url(./img/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    color: white;
+    font-size: 12vmin;
+    font-family: 'Tangerine', cursive;
+    font-weight: bold;
+}
+
+#main .section-selector span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    filter: drop-shadow(.05em .05em .03em black);
+    cursor: pointer;
+    transition: background-color 0.22s ease-in-out;
+}
+
+#main .section-selector span:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#main .dissolve {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#main h1 {
+    font-size: 15vmin;
+    color: #222
+}
+
+.sections section.hide {
+    display: none;
+}
+
+iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
