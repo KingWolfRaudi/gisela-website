@@ -1,9 +1,3 @@
-<?php
-	function includeFileWithVariables($fileName, $variables) {
-		extract($variables);
-		include($fileName);
-	}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,10 +34,10 @@
                 <iframe src="learning_n_consulting/index.html" style="height: 100vh; width: 100vw; overflow: hidden"></iframe>
             </section>
             <section class="hide" id="accounting">
-                <?php include('accounting/index.php') ?>
+                <a href="accounting/index.html">Accounting</a>
             </section>
             <section class="hide" id="others">
-                <?php include('others/index.php') ?>
+                <a href="others/index.php">Accounting</a>
             </section>
         </div>
         <div thanos-dissolve class="dissolve section-selector">
