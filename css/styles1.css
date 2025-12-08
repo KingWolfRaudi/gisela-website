@@ -10965,6 +10965,10 @@ p {
   gap: 1rem;
 }
 
+.intro > div {
+  margin: 0.5rem; /* margen pequeño alrededor de cada div */
+}
+
 .intro-img {
   width: 100%;
   height: auto;
