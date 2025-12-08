@@ -10974,7 +10974,7 @@ p {
   height: auto;
 }
 /* En pantallas pequeñas (teléfonos) */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .intro-img {
     display: none; /* Oculta la imagen */
   }
