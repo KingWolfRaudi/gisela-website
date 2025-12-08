@@ -10959,31 +10959,55 @@ p {
 }
 
 .intro {
-  position: relative;
+  display: flex;
+  flex-direction: column; /* Por defecto en móvil/tablet */
+  align-items: center;
+  gap: 1rem;
 }
+
+.intro-img {
+  width: 100%;
+  height: auto;
+}
+/* En pantallas pequeñas (teléfonos) */
+@media (max-width: 576px) {
+  .intro-img {
+    display: none; /* Oculta la imagen */
+  }
+}
+
+
+
+.intro-text {
+  width: 100%;
+  text-align: center;
+}
+
+/* En pantallas grandes */
 @media (min-width: 992px) {
-  .intro .intro-img {
-    width: 45%;
-    float: right;
+  .intro {
+    flex-direction: row; /* Imagen y texto lado a lado */
+    justify-content: space-between;
+    align-items: center;
   }
-  .intro .intro-text {
-    left: 0;
-    width: 60%;
-    margin-top: 3rem;
-    position: absolute;
-  }
-  .intro .intro-text .intro-button {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    bottom: -2rem;
-  }
-}
-@media (min-width: 1200px) {
-  .intro .intro-text {
+
+  .intro-img {
     width: 45%;
   }
+
+  .intro-text {
+    width: 50%;
+    text-align: left;
+    position: static; /* Elimina absolute */
+    margin-top: 0;
+  }
+
+  .intro-button {
+    position: static; /* Deja que fluya dentro del texto */
+    margin-top: 1rem;
+  }
 }
+
 
 @media (min-width: 992px) {
   .product-item .product-item-title {
@@ -11003,6 +11027,8 @@ p {
     max-width: 50vw;
   }
 }
+
+
 
 .list-hours {
   font-size: 0.9rem;
