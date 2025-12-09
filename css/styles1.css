@@ -10876,9 +10876,22 @@ p {
   font-size: 3rem;
   font-weight: 100;
 }
+.section-heading .section-heading-card {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+#text-card{
+  text-align: justify;
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #0dcaf0;
+}
 
 .bg-faded {
-  background-color: #f6e1c5;
+  background-color: rgba(246, 225, 197, 0.7);
 }
 
 .btn-xl {
@@ -10935,7 +10948,7 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
+  background-color: rgba(230, 167, 86, 0.7);
 }
 .cta .cta-inner {
   position: relative;
@@ -10954,8 +10967,9 @@ p {
   z-index: -1;
 }
 
+
 .footer {
-  background-color: rgba(47, 23, 15, 0.9);
+  background-color: rgba(255, 136, 77, 0.7);
 }
 
 .intro {
@@ -10987,6 +11001,7 @@ p {
   width: 100%;
   text-align: center;
 }
+
 
 /* En pantallas grandes */
 @media (min-width: 992px) {
