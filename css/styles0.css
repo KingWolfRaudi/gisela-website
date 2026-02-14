@@ -1,0 +1,138 @@
+.footer {
+  background-color: rgba(255, 136, 77, 0.6);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column; /* Por defecto en móvil/tablet */
+  align-items: center;
+  gap: 1rem;
+}
+
+.intro > div {
+  margin: 0.5rem; /* margen pequeño alrededor de cada div */
+}
+
+
+.intro-img {
+  width: 100%;
+  height: auto;
+}
+/* En pantallas pequeñas (teléfonos) */
+@media (max-width: 991px) {
+  .intro-img {
+    display: none; /* Oculta la imagen */
+  }
+}
+
+
+
+.intro-text {
+  width: 100%;
+  text-align: center;
+}
+
+
+/* En pantallas grandes */
+@media (min-width: 992px) {
+  .intro {
+    flex-direction: row; /* Imagen y texto lado a lado */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .intro-img {
+    width: 45%;
+  }
+
+  .intro-text {
+    width: 50%;
+    text-align: left;
+    position: static; /* Elimina absolute */
+    margin-top: 0;
+  }
+
+  .intro-button {
+    position: static; /* Deja que fluya dentro del texto */
+    margin-top: 1rem;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -3rem;
+  }
+  .product-item .product-item-img {
+    position: relative;
+    z-index: 0;
+    max-width: 60vw;
+  }
+  .product-item .product-item-description {
+    position: relative;
+    z-index: 1;
+    margin-top: -3rem;
+    max-width: 50vw;
+  }
+}
+
+
+
+.list-hours {
+  font-size: 0.9rem;
+}
+.list-hours .list-hours-item {
+  border-bottom: 1px solid rgba(230, 167, 86, 0.5);
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+.list-hours .list-hours-item.today {
+  font-weight: bold;
+  color: #e6a756;
+}
+@media (min-width: 992px) {
+  .list-hours {
+    width: 50%;
+    font-size: 1.1rem;
+  }
+}
+
+.address strong {
+  font-size: 1.2rem;
+}
+
+
+
+.bloques-perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  text-align: left;
+}
+
+/* Estilo de cada bloque */
+.bloque {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* En desktop: 2 columnas */
+@media (min-width: 992px) {
+  .bloques-perfil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.textContainer {
+  font-size: 1.3rem;
+}
+
+
