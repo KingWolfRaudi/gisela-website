@@ -135,4 +135,30 @@
   font-size: 1.3rem;
 }
 
+/*
+body {
+  background-image: url("../assets/img/bg.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+*/
 
+body {
+  /* La primera capa es el filtro (ajusta el 0.5 para más o menos transparencia) */
+  /* La segunda capa es tu imagen original */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4)), 
+    url("../assets/img/bg.png");
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  
+  /* Evita que la imagen se repita si el gradiente es más grande */
+  background-repeat: no-repeat; 
+}
+
+p {
+  line-height: 1.75;
+}

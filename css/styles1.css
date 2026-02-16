@@ -10863,16 +10863,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  background-image: url("../assets/img/bg.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
-
-p {
-  line-height: 1.75;
-}
 
 .text-faded {
   color: #f6e1c5;
