@@ -154,3 +154,19 @@ p {
     color: rgba(255, 255, 255, 0.4);
   }
 }
+
+/* =========================================
+   AJUSTES PARA PANTALLAS MÓVILES (Celulares)
+   ========================================= */
+@media (max-width: 576px) {
+    /* Reduce el tamaño del texto de las preguntas y respuestas */
+    .textContainer p {
+        font-size: 0.9rem; /* Letra más pequeña */
+        line-height: 1.4;  /* Espacio entre líneas más cómodo */
+    }
+    
+    /* Reduce un poco el título principal del cuadro */
+    .section-heading-lower {
+        font-size: 1.5rem !important; 
+    }
+}
