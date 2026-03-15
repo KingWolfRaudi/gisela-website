@@ -51,6 +51,31 @@
     position: static; /* Elimina absolute */
     margin-top: 0;
   }
+
+  .intro-button {
+    position: static; /* Deja que fluya dentro del texto */
+    margin-top: 1rem;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .product-item .product-item-title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -3rem;
+  }
+  .product-item .product-item-img {
+    position: relative;
+    z-index: 0;
+    max-width: 60vw;
+  }
+  .product-item .product-item-description {
+    position: relative;
+    z-index: 1;
+    margin-top: -3rem;
+    max-width: 50vw;
+  }
 }
 
 
@@ -63,6 +88,10 @@
   padding-bottom: 0.25rem;
   margin-bottom: 1rem;
   font-style: italic;
+}
+.list-hours .list-hours-item.today {
+  font-weight: bold;
+  color: #e6a756;
 }
 @media (min-width: 992px) {
   .list-hours {
@@ -118,10 +147,10 @@ body {
 body {
   /* La primera capa es el filtro (ajusta el 0.5 para más o menos transparencia) */
   /* La segunda capa es tu imagen original */
-  background-image: 
+/* background-image: 
     linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4)), 
-    url("../assets/img/bg.png");
-  /*background-color: rgba(200, 222, 191, 1); */
+    url("../assets/img/b.png"); */
+  background-color: rgba(200, 222, 191, 1);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -132,25 +161,4 @@ body {
 
 p {
   line-height: 1.75;
-}
-
-/* ESTE ES EL COLOR DEL NAV*/
-#mainNav {
-  background-color: rgba(255, 136, 77, 0.6);
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-#mainNav .navbar-brand {
-  color: #e6a756;
-}
-#mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 800;
-}
-@media (min-width: 992px) {
-  #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 0.9rem;
-  }
-  #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgba(255, 255, 255, 0.4);
-  }
 }
