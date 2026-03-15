@@ -156,17 +156,70 @@ p {
 }
 
 /* =========================================
-   AJUSTES PARA PANTALLAS MÓVILES (Celulares)
+   1. AJUSTES PARA MOBILE S (Pantallas hasta 374px - ej. 320px)
    ========================================= */
-@media (max-width: 576px) {
-    /* Reduce el tamaño del texto de las preguntas y respuestas */
-    .textContainer p {
-        font-size: 0.9rem; /* Letra más pequeña */
-        line-height: 1.4;  /* Espacio entre líneas más cómodo */
+@media (max-width: 374px) {
+    /* --- Ajustes de texto existentes --- */
+    .textContainer p, .textContainer li {
+        font-size: 0.85rem; 
+        line-height: 1.4;
     }
+    .section-heading-lower {
+        font-size: 1.3rem !important; 
+    }
+
+    /* --- [AJUSTE NUEVO] Centrado de elementos --- */
     
-    /* Reduce un poco el título principal del cuadro */
+    /* Centra el logo de Tradulearn en el primer bloque */
+    .cta-logo {
+        display: block;        /* Necesario para usar márgenes automáticos */
+        margin-left: auto;     /* Empuja desde la izquierda al centro */
+        margin-right: auto;    /* Empuja desde la derecha al centro */
+    }
+
+    /* Centra los títulos de las secciones (ej. VOCABULARIO) */
+    .section-heading-card {
+        text-align: center;    /* Fuerza el centrado del texto del título */
+        width: 100%;           /* Asegura que ocupe todo el ancho para centrarse */
+    }
+}
+
+/* =========================================
+   2. AJUSTES PARA MOBILE M (Pantallas entre 375px y 424px)
+   ========================================= */
+@media (min-width: 375px) and (max-width: 424px) {
+    /* --- Ajustes de texto existentes --- */
+    .textContainer p, .textContainer li {
+        font-size: 0.95rem; 
+        line-height: 1.5;
+    }
     .section-heading-lower {
         font-size: 1.5rem !important; 
+    }
+
+    /* --- [AJUSTE NUEVO] Centrado de elementos (Mismos ajustes que Mobile S) --- */
+    
+    .cta-logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section-heading-card {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* =========================================
+   3. AJUSTES PARA MOBILE L (Pantallas entre 425px y 575px)
+   ========================================= */
+@media (min-width: 425px) and (max-width: 575px) {
+    .textContainer p, .textContainer li {
+        font-size: 1rem; 
+        line-height: 1.5;
+    }
+    .section-heading-lower {
+        font-size: 1.7rem !important; 
     }
 }
