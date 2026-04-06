@@ -120,7 +120,7 @@ body {
   /* La segunda capa es tu imagen original */
   background-image: 
     linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4)), 
-    url("../assets/img/bg.png");
+    url("../assets/img/bg.jpg");
   /*background-color: rgba(200, 222, 191, 1); */
   background-attachment: fixed;
   background-position: center;
